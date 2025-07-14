@@ -48,4 +48,4 @@ ________________________________________
 
 ### 🔗 Additional Learning Resources  
 1. **MS Learn URL:** [Role-based access control (RBAC) in Azure](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)  
-2. **YouTube video for the question:** []
+2. **YouTube video for the question:** [Video resource to be added shortly]
