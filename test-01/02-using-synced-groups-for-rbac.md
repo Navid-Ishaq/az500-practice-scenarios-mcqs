@@ -1,9 +1,9 @@
-### 1. **Question Title**  
+### **Question Title**  
 Using Synced Security Groups for RBAC in Azure
 
 ---
 
-### 2. **New MCQ Scenario Statement**  
+### **MCQ Scenario**  
 Omar works at **CloudCore Labs**, where the organization manages several internal tools hosted in Azure. Each tool lives in its own resource group, and the entire Azure subscription is connected to their on-premises Active Directory via Microsoft Entra Connect.
 
 To simplify how users gain access to the tools, Omar wants to avoid assigning roles to users one-by-one. Instead, he uses their existing AD DS security groups — which are already structured by department — and assigns Azure roles to these groups at the resource group level. Members of each group need access to manage the resources relevant to their department.
@@ -14,7 +14,7 @@ Does this approach meet the goal?
 
 ---
 
-### 3. **Answer Choices**  
+### **Options**  
 (a) No, because AD DS groups can’t be used for Azure role assignments  
 (b) Yes, because AD DS groups synced via Entra Connect can be used in role assignments  
 (c) No, because you must use Microsoft Entra dynamic groups for RBAC  
@@ -22,11 +22,11 @@ Does this approach meet the goal?
 
 ---
 
-### ✅ 4. **Correct Answer:** (B)
+### ✅ **Correct Answer:** (B)
 
 ---
 
-### 💡 5. **Explanation**  
+### 💡 **Explanation**  
 **Why (B) is correct:**  
 Since Omar’s organization has **Microsoft Entra Connect** syncing their **on-premises AD DS**, the **security groups from AD DS become available in Entra ID** (formerly Azure AD). This means those groups **can be used for role assignments** in Azure. It's an efficient way to centralize and automate access control without manually handling every user.
 
@@ -37,7 +37,7 @@ Since Omar’s organization has **Microsoft Entra Connect** syncing their **on-p
 
 ---
 
-### 💬 6. **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
+### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
 ________________________________________  
 "The simpler your system of access, the stronger your foundation of trust."  
 — Jamalu  
