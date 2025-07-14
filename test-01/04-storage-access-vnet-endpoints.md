@@ -52,4 +52,4 @@ ________________________________________
 
 ### 🔗 Additional Learning Resources  
 1. **MS Learn URL:** [Secure access to storage with virtual network endpoints](https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security#grant-access-from-a-virtual-network)  
-2. **YouTube video for the question:** []
+2. **YouTube video for the question:** [Video resource to be added shortly]
