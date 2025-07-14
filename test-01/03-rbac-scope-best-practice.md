@@ -37,6 +37,58 @@ By assigning roles at the **subscription level**, Ayesha ends up granting access
 
 ---
 
+### 🧩 **Conceptual Diagram: Role Scope – Subscription vs Resource Group**
+
+```plaintext
+  Before (Granular, Least Privilege) ✅
+  ------------------------------------
+
++----------------------------+
+| Azure Subscription         |
+| (SkyBridgeTech)            |
++----------------------------+
+          |       
+          |       
++---------+----------+---------+----------+
+|                    |                    |
+v                    v                    v
+App A - RG       App B - RG           App C - RG
+(Dev Team A)     (Dev Team B)         (Dev Team C)
+   ^                  ^                   ^
+   |                  |                   |
+Entra Group A     Entra Group B       Entra Group C
+(Role assigned    (Role assigned      (Role assigned
+at RG level)      at RG level)        at RG level)
+
+
+  After (Broad Scope, Overexposed) ❌
+  -----------------------------------
+
++----------------------------+
+| Azure Subscription         |
+| (SkyBridgeTech)            |
++----------------------------+
+          |
+          v
+   Entra Group ALL-ACCESS
+   (Role assigned at subscription level)
+
+      Access to:
+      - App A - RG
+      - App B - RG
+      - App C - RG
+      - Any future RGs (by default)
+```
+
+
+### 📝 Key Takeaway:
+
+* ✅ Assigning roles at the **resource group level** enforces **least-privilege access**.
+* ❌ Assigning roles at the **subscription level** **over-grants access**, even to apps the user may not work on.
+* 📌 Role inheritance is powerful — but must be used **deliberately**, not for convenience alone.
+
+---
+
 ### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
 ________________________________________  
 "Permission without precision creates chaos in the cloud."  
