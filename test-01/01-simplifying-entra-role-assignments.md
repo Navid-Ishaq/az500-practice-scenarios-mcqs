@@ -47,7 +47,7 @@ ________________________________________
 ---
 
 ### 🔗 Additional Learning Resources  
-1. **URL:** [How to manage Microsoft Entra groups](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups)  
+1. **MS Learn URL:** [How to manage Microsoft Entra groups](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups)  
 2. **YouTube video for the question:** []
 
 
