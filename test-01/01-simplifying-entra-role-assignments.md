@@ -37,6 +37,41 @@ Assigning roles to **Microsoft Entra groups** at the **resource group level** is
 
 ---
 
+### 🧩 **Conceptual Diagram: Using Microsoft Entra Groups for RBAC at Resource Group Level**
+
+```plaintext
+                            +-----------------------------+
+                            | Microsoft Entra ID (Cloud)  |
+                            | Synced with on-prem AD DS   |
+                            +-------------+---------------+
+                                          |
+             +----------------------------+----------------------------+
+             |                             |                            |
+     +-------v--------+          +--------v-------+           +--------v--------+
+     | Entra Group A  |          | Entra Group B  |           | Entra Group C   |
+     | (Team Alpha)   |          | (Team Beta)    |           | (Team Gamma)    |
+     +-------+--------+          +--------+-------+           +--------+--------+
+             |                            |                            |
+             |                            |                            |
+     +-------v--------+          +--------v-------+           +--------v--------+
+     | Resource Group |          | Resource Group |           | Resource Group  |
+     | "Alpha-Tools"  |          | "Beta-App"     |           | "Gamma-Data"    |
+     +----------------+          +----------------+           +-----------------+
+             ▲                            ▲                            ▲
+             |                            |                            |
+    Developers added              Developers added             Developers added
+     to Entra Group A             to Entra Group B              to Entra Group C
+```
+
+---
+
+### 📝 Key Points:
+
+* ✅ **Entra Groups** are the bridge between **user identity** and **resource access**.
+* ✅ RBAC roles are **assigned once per group**, reducing manual effort.
+* ✅ This structure supports **least-privilege access** and **scalable management**.
+
+---
 ### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
 ________________________________________  
 "Systems grow strong not through complexity, but through thoughtful simplicity."  
