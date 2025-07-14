@@ -37,6 +37,58 @@ By assigning roles at the **subscription level**, Ayesha ends up granting access
 
 ---
 
+## 🛠️ **Tools & Services Referenced in This Scenario**
+
+---
+
+### 1. **Microsoft Entra Connect**
+
+Microsoft Entra Connect bridges your on-premises Active Directory (AD DS) with Microsoft Entra ID (formerly Azure AD).
+It enables hybrid identity synchronization, allowing centralized user and group management across environments.
+In this scenario, it's used to sync on-prem users and groups into the Azure environment.
+
+---
+
+### 2. **Active Directory Domain Services (AD DS)**
+
+AD DS is the traditional on-premises identity solution used by many organizations for user and group management.
+It supports security groups that can be synced to Microsoft Entra ID via Entra Connect.
+Though not the primary focus here, it's the foundation of Ayesha’s organization’s identity model.
+
+---
+
+### 3. **Microsoft Entra ID (formerly Azure AD)**
+
+Microsoft Entra ID is Azure’s cloud-based identity platform, used for authentication and access control.
+It enables features like group-based access, single sign-on, conditional access, and directory syncing.
+RBAC roles can be assigned to synced users and groups from here.
+
+---
+
+### 4. **Azure Role-Based Access Control (RBAC)**
+
+RBAC allows fine-grained access management of Azure resources through built-in and custom roles.
+Permissions can be assigned at different scopes — management group, subscription, resource group, or resource level.
+This scenario highlights the risks of assigning roles too broadly at the **subscription** level.
+
+---
+
+### 5. **Azure Subscription**
+
+A subscription is a billing and resource management boundary in Azure.
+It contains one or more resource groups, and you can apply RBAC roles at this level.
+However, broad assignments here may over-permission users — as Ayesha discovered.
+
+---
+
+### 6. **Azure Resource Groups**
+
+Resource groups are containers for managing and organizing related Azure resources.
+They support scoped RBAC assignments, making them ideal for applying least-privilege access.
+Ayesha originally used this level to assign access, aligning well with security best practices.
+
+---
+
 ### 🧩 **Conceptual Diagram: Role Scope – Subscription vs Resource Group**
 
 ```plaintext
@@ -96,7 +148,7 @@ ________________________________________
 — Siraat AI Academy  
 ________________________________________
 
----
+
 
 ### 🔗 Additional Learning Resources  
 1. **MS Learn URL:** [Role-based access control (RBAC) in Azure](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)  
