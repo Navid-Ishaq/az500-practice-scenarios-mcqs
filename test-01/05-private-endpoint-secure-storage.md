@@ -41,6 +41,46 @@ Private endpoints assign a **private IP address** from the virtual network to th
 
 ---
 
+### 🧩 **Conceptual Diagram: Azure Storage Access via Private Endpoint**
+
+```plaintext
+       +--------------------------+
+       |   Virtual Machine (VM)   |
+       |   in VNet (BlueGrid)     |
+       +------------+-------------+
+                    |
+                    |  ✅ Connects using Private IP
+                    |  (via Private Endpoint)
+                    v
+       +-------------------------------+
+       |     Private Endpoint (PE)     |
+       |   (Mapped to Storage Account) |
+       |   IP from VNet subnet space   |
+       +---------------+---------------+
+                       |
+                       |  🔒 Traffic flows over Azure backbone
+                       v
+         +-----------------------------+
+         |   Azure Storage Account     |
+         |   - Public access disabled  |
+         |   - Access allowed only via|
+         |     private endpoint        |
+         +-----------------------------+
+```
+
+---
+
+### 📝 Key Takeaways:
+
+* ✅ **Private Endpoints** assign a **private IP** from your VNet to a Microsoft-managed service.
+* ✅ All data flows **over Microsoft’s backbone network** — no public routing.
+* ✅ Public access is **fully disabled** by default (unless overridden).
+* 🔧 DNS and NIC integration ensure seamless resolution and connectivity from within the VNet.
+
+This diagram makes it crystal clear why Sofia's approach fully meets the organization's security and simplicity goals.
+
+---
+
 ### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
 ________________________________________  
 "True security hides in plain sight — close to home, never exposed."  
