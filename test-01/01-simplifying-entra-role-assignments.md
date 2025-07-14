@@ -37,6 +37,61 @@ Assigning roles to **Microsoft Entra groups** at the **resource group level** is
 
 ---
 
+## 🛠️ **Tools & Services Referenced in the Scenario**
+
+---
+
+### 1. **Microsoft Entra ID (formerly Azure AD)**
+
+Microsoft Entra ID is Azure's identity and access management (IAM) service.
+It helps secure user identities and control access to apps, resources, and environments.
+In this scenario, it's used to manage group-based access to Azure resources.
+
+---
+
+### 2. **Microsoft Entra Groups**
+
+Entra groups are collections of users that can be assigned permissions as a unit.
+They simplify RBAC by letting you assign roles to a group instead of individual users.
+Sofia uses a group-per-tool model to streamline access control across teams.
+
+---
+
+### 3. **Azure Role-Based Access Control (RBAC)**
+
+Azure RBAC allows fine-grained access management for Azure resources.
+It supports scoping permissions at subscription, resource group, or resource level.
+In this case, RBAC is used at the resource group level via Entra group assignments.
+
+---
+
+### 4. **Microsoft Entra Connect**
+
+Entra Connect syncs on-premises Active Directory (AD DS) with Microsoft Entra ID.
+It ensures that users and groups from an on-prem environment can be recognized in Azure.
+Though not explicitly configured in Sofia’s setup, it's often part of hybrid identity solutions.
+
+---
+
+### 5. **Azure Resource Groups**
+
+A resource group is a container for related Azure resources like VMs, databases, and web apps.
+It allows grouped access control and lifecycle management of resources.
+Each internal tool in NovaSky’s environment resides in its own resource group.
+
+---
+
+### 6. **Azure Blueprints**
+
+Azure Blueprints help automate and standardize environment deployments across subscriptions.
+They include artifacts like policies, role assignments, and ARM templates.
+Mentioned in the question as an incorrect requirement — not needed in Sofia’s RBAC approach.
+
+---
+
+
+---
+
 ### 🧩 **Conceptual Diagram: Using Microsoft Entra Groups for RBAC at Resource Group Level**
 
 ```plaintext
