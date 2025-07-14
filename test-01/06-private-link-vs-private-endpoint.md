@@ -48,11 +48,7 @@ ________________________________________
 ________________________________________
 
 ---
-Absolutely! Here's a **text-based diagram** (ASCII-style) to visually reinforce the distinction between **Private Endpoint** and **Private Link Service** — perfect for Markdown and learners working through this topic.
 
-You can paste this directly below the explanation section or before the "Additional Learning Resources" section.
-
----
 
 ### 🧩 **Conceptual Diagram: Private Endpoint vs Private Link Service**
 
@@ -92,7 +88,6 @@ You can paste this directly below the explanation section or before the "Additio
 * ✅ **Use Private Endpoint** to securely connect to Microsoft-managed services like Storage, SQL, Key Vault, etc.
 * ❌ **Private Link Service** is only for exposing your **own services** privately to other customers or VNets.
 
-Let me know if you'd like the diagram styled differently or included as part of all relevant outputs moving forward!
 
 ---
 
