@@ -39,6 +39,45 @@ Did Jordan’s solution fully meet the company’s security and design goals?
 - **(C)** is partially misleading — while **private endpoints** offer stronger isolation, **they are not required** for connectivity. But in this case, the service endpoint alone doesn’t meet all goals.  
 - **(D)** overstates the capability of service endpoints. They’re useful, but **private endpoints** are typically preferred for high-security needs.
 
+
+---
+
+### 🧩 **Conceptual Diagram: Service Endpoints with Azure Storage**
+
+```plaintext
+     +-------------------------+           +---------------------------+
+     |  Virtual Machine (VM)   |           |    Azure Storage Account  |
+     |  in VNet (NovaByte)     |           |    (Microsoft-managed)    |
+     +-----------+-------------+           +-------------+-------------+
+                 |                                       |
+                 |   ✅ Service Endpoint Enabled         |
+                 +-------------------------------------->|
+                 |   Traffic goes over Azure backbone    |
+                 |                                       |
+                 |                                       |
+                 |   ❌ Public Access Still Allowed      |
+                 +-----------------------------------+   |
+                                                     |   |
+     (Unless explicitly disabled via network rules)  |   |
+                                                     v   v
+                                         +-----------------------------+
+                                         |  Storage Account Firewall   |
+                                         |  (Public endpoint open by   |
+                                         |   default unless configured)|
+                                         +-----------------------------+
+```
+
+---
+
+### 📝 Key Insights:
+
+* ✅ **Service endpoints** allow traffic from the VM to travel over the **Azure backbone network**, not the internet.
+* ❌ However, they **do not disable public access** to the storage account by default.
+* 🔐 To fully secure the storage, you must **configure network rules** to deny public traffic.
+
+This visual helps clarify that **service endpoints improve performance and pathing**, but **don’t provide isolation or blocking** unless extra steps are taken.
+
+
 ---
 
 ### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
