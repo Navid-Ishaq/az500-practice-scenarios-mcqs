@@ -41,6 +41,50 @@ Private endpoints assign a **private IP address** from the virtual network to th
 
 ---
 
+## 🛠️ **Tools & Services Referenced in This Scenario**
+
+---
+
+### 1. **Azure Virtual Network (VNet)**
+
+An Azure Virtual Network (VNet) allows resources like VMs and services to securely communicate with each other.
+It acts as a logical isolation unit and supports routing, subnets, private IPs, and integration with services.
+Sofia’s VMs and private endpoints operate inside a VNet for secure internal traffic flow.
+
+---
+
+### 2. **Azure Virtual Machines (VMs)**
+
+Azure VMs provide on-demand compute power to run workloads, applications, and scripts in the cloud.
+They can connect privately to storage and other services when placed within a VNet.
+In this case, Sofia’s VMs need secure access to an Azure Storage account with no public exposure.
+
+---
+
+### 3. **Azure Storage Account**
+
+An Azure Storage account provides scalable storage options like blobs, files, queues, and tables.
+It's often used to store application data, logs, and user files securely and reliably.
+Sofia secures this storage account by connecting it through a private endpoint.
+
+---
+
+### 4. **Private Endpoint**
+
+A Private Endpoint maps an Azure resource (like Storage) to a **private IP** inside a VNet.
+This ensures all traffic flows over Azure’s backbone network — never the public internet.
+It also **disables public access by default**, aligning with strong security principles.
+
+---
+
+### 5. **Azure Private DNS Zone**
+
+Private DNS zones resolve private endpoint names to their internal IP addresses.
+This eliminates the need for manual DNS management inside virtual networks.
+Sofia confirms that DNS resolution is working so that VMs can reach the storage endpoint internally.
+
+---
+
 ### 🧩 **Conceptual Diagram: Azure Storage Access via Private Endpoint**
 
 ```plaintext
@@ -88,7 +132,7 @@ ________________________________________
 — Siraat AI Academy  
 ________________________________________
 
----
+
 
 ### 🔗 Additional Learning Resources  
 1. **MS Learn URL:** [Connect privately to an Azure storage account using Azure Private Endpoint](https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-storage-portal)  
