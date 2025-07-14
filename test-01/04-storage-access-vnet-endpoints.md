@@ -39,6 +39,49 @@ Did Jordan’s solution fully meet the company’s security and design goals?
 - **(C)** is partially misleading — while **private endpoints** offer stronger isolation, **they are not required** for connectivity. But in this case, the service endpoint alone doesn’t meet all goals.  
 - **(D)** overstates the capability of service endpoints. They’re useful, but **private endpoints** are typically preferred for high-security needs.
 
+---
+
+## 🛠️ **Tools & Services Referenced in This Scenario**
+
+---
+
+### 1. **Azure Virtual Network (VNet)**
+
+An Azure Virtual Network is the foundational building block for private networking in Azure.
+It enables secure communication between Azure resources, on-premises environments, and the internet.
+In this scenario, the VMs are placed within a VNet to enforce internal routing and security.
+
+---
+
+### 2. **Azure Virtual Machines (VMs)**
+
+Azure VMs are scalable, on-demand compute resources used for hosting applications and workloads.
+They can be connected to a virtual network and communicate with services like storage accounts.
+Jordan’s team uses VMs to interact with the storage layer securely from within the VNet.
+
+---
+
+### 3. **Azure Storage Account**
+
+An Azure Storage account provides scalable cloud storage for objects, files, disks, queues, and tables.
+It supports secure access through networking rules, encryption, and identity-based controls.
+Jordan’s VMs need to read/write data from this storage account — securely and privately.
+
+---
+
+### 4. **Service Endpoints (Virtual Network Service Endpoints)**
+
+Service Endpoints extend a VNet's identity to Azure services over the Azure backbone.
+They improve performance and privacy by keeping traffic within Microsoft's network.
+However, they **do not block public access** by default — additional configuration is required.
+
+---
+
+### 5. **Azure Firewall & Network Rules**
+
+These are optional configurations to explicitly allow or deny access to Azure services.
+When using service endpoints, **network rules must be manually configured** to block public IP traffic.
+Without these rules, the storage account remains exposed to the internet.
 
 ---
 
@@ -65,7 +108,7 @@ Did Jordan’s solution fully meet the company’s security and design goals?
                                          |  (Public endpoint open by   |
                                          |   default unless configured)|
                                          +-----------------------------+
-```
+
 
 ---
 
@@ -87,7 +130,7 @@ ________________________________________
 — Siraat AI Academy  
 ________________________________________
 
----
+
 
 ### 🔗 Additional Learning Resources  
 1. **MS Learn URL:** [Secure access to storage with virtual network endpoints](https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security#grant-access-from-a-virtual-network)  
