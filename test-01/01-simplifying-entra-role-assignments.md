@@ -47,5 +47,5 @@ ________________________________________
 ---
 
 ### 🔗 Additional Learning Resources  
-1. **MS Learn URL for the topic:** [https://chatgpt.com/c/6874f622-60d4-800d-8fdd-a6d59a962c73]  
+1. **Microsoft Entra Groups** [https://chatgpt.com/c/6874f622-60d4-800d-8fdd-a6d59a962c73]  
 2. **YouTube video for the question:** []
