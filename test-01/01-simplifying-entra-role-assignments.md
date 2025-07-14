@@ -1,9 +1,9 @@
-### 1. **Question Title**  
+### **Question Title**  
 Efficient Permission Management with Microsoft Entra Groups
 
 ---
 
-### 2. **New MCQ Scenario Statement**  
+### **MCQ Scenario**  
 Sofia is a cloud administrator at **NovaSky Innovations**, a company that develops several internal Azure-hosted tools. Each tool has its own resource group within the company’s Azure subscription, which is tied to a tenant synchronized with their on-prem AD using Microsoft Entra Connect.
 
 To streamline access management, Sofia wants to assign permissions to multiple developers who frequently work across different tools. She’s considering a strategy that minimizes repetitive role assignments while keeping access control clean and centralized.
@@ -14,7 +14,7 @@ Is this an effective way to manage access?
 
 ---
 
-### 3. **Answer Choices**  
+### **Options**  
 (a) No, because roles should be assigned directly to individual users for more granular control  
 (b) Yes, because assigning roles to Entra groups simplifies permission management and ensures scalability  
 (c) No, because roles must always be applied at the subscription level for consistency  
@@ -22,11 +22,11 @@ Is this an effective way to manage access?
 
 ---
 
-### ✅ 4. **Correct Answer:** (B)
+### ✅ **Correct Answer:** (B)
 
 ---
 
-### 💡 5. **Explanation**  
+### 💡 **Explanation**  
 **Why (B) is correct:**  
 Assigning roles to **Microsoft Entra groups** at the **resource group level** is a recommended and scalable practice. It reduces the need for individually managing permissions for each user, making it much easier to onboard, offboard, or reassign developers across projects. Sofia’s approach supports both clarity and efficiency in access control — especially in a multi-app, multi-team environment.
 
@@ -37,7 +37,7 @@ Assigning roles to **Microsoft Entra groups** at the **resource group level** is
 
 ---
 
-### 💬 6. **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
+### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
 ________________________________________  
 "Systems grow strong not through complexity, but through thoughtful simplicity."  
 — Jamalu  
