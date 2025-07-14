@@ -35,6 +35,52 @@ Since Omar’s organization has **Microsoft Entra Connect** syncing their **on-p
 - **(C)** misunderstands the need: dynamic groups are useful for automation but are not a requirement for assigning roles.  
 - **(D)** confuses scope — role assignments don't *have* to be made at the subscription level; **resource group-level** assignments are common and align with least-privilege principles.
 
+
+---
+
+## 🛠️ **Referenced Tools & Services – Explained**
+
+---
+
+### 1. **Active Directory Domain Services (AD DS)**
+
+AD DS is Microsoft's on-premises directory service used for identity management within organizations.
+It provides traditional user and group structures used in corporate networks.
+In Omar’s case, it contains departmental security groups that are synced to Azure.
+
+---
+
+### 2. **Microsoft Entra Connect**
+
+Entra Connect synchronizes identities and groups from on-prem AD DS to Microsoft Entra ID (formerly Azure AD).
+It enables hybrid identity management — allowing users to use the same credentials on-prem and in the cloud.
+This sync makes AD DS security groups available for Azure RBAC assignments.
+
+---
+
+### 3. **Microsoft Entra ID (formerly Azure AD)**
+
+Microsoft Entra ID is Azure’s cloud-based identity and access management platform.
+It supports user sign-in, authentication, conditional access, and group-based RBAC.
+Synced AD groups appear here and can be assigned roles across Azure resources.
+
+---
+
+### 4. **Azure Role-Based Access Control (RBAC)**
+
+RBAC is the system that governs who can access which Azure resources, and what actions they can take.
+Roles can be assigned to users, groups, or service principals at different scopes (resource group, subscription, etc.).
+In this case, roles are assigned to **synced groups**, not individual users — making access scalable and clean.
+
+---
+
+### 5. **Azure Resource Groups**
+
+Resource groups are logical containers for Azure resources such as VMs, databases, and networking components.
+They support scoped access control and lifecycle management per application or team.
+Omar assigns roles to security groups at this level to reflect app-level responsibilities.
+
+
 ---
 
 ### 🧩 **Conceptual Diagram: Role Assignment Using Synced AD DS Security Groups**
