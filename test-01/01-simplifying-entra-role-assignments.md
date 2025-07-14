@@ -89,9 +89,6 @@ Mentioned in the question as an incorrect requirement — not needed in Sofia’
 
 ---
 
-
----
-
 ### 🧩 **Conceptual Diagram: Using Microsoft Entra Groups for RBAC at Resource Group Level**
 
 ```plaintext
@@ -127,6 +124,7 @@ Mentioned in the question as an incorrect requirement — not needed in Sofia’
 * ✅ This structure supports **least-privilege access** and **scalable management**.
 
 ---
+
 ### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
 ________________________________________  
 "Systems grow strong not through complexity, but through thoughtful simplicity."  
