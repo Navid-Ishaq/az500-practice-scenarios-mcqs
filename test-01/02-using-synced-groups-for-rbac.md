@@ -37,6 +37,47 @@ Since Omar’s organization has **Microsoft Entra Connect** syncing their **on-p
 
 ---
 
+### 🧩 **Conceptual Diagram: Role Assignment Using Synced AD DS Security Groups**
+
+```plaintext
+                         +----------------------------+
+                         | On-Prem AD DS (by Dept)    |
+                         | - IT-Support Group         |
+                         | - Dev-Team-A Group         |
+                         | - FinanceOps Group         |
+                         +------------+---------------+
+                                      |
+               Sync via Microsoft Entra Connect
+                                      |
+                         +------------v---------------+
+                         | Microsoft Entra ID (Cloud) |
+                         | (Synced Security Groups)   |
+                         +------------+---------------+
+                                      |
+        +-----------------------------+-----------------------------+
+        |                             |                             |
++-------v--------+          +---------v--------+         +----------v--------+
+| Dev-Team-A     |          | FinanceOps Group |         | IT-Support Group  |
++-------+--------+          +---------+--------+         +----------+--------+
+        |                             |                             |
+        v                             v                             v
++---------------+           +------------------+         +------------------+
+| Resource Group|           | Resource Group   |         | Resource Group   |
+| "App A"       |           | "Fin Reports"    |         | "Support Tools"  |
++---------------+           +------------------+         +------------------+
+```
+
+---
+
+### 📝 Key Concepts:
+
+* ✅ **AD DS security groups** are synced into **Microsoft Entra ID** via **Entra Connect**.
+* ✅ RBAC roles are **assigned to these groups** at the **resource group level**.
+* ✅ Members of each group gain access automatically — a **centralized and scalable model**.
+
+
+---
+
 ### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
 ________________________________________  
 "The simpler your system of access, the stronger your foundation of trust."  
