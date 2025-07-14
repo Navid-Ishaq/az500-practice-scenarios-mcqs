@@ -40,16 +40,6 @@ Did Taylor choose the correct solution?
 
 ---
 
-### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
-________________________________________  
-"Choosing the right service is not just technical — it’s strategic clarity."  
-— Jamalu  
-— Siraat AI Academy  
-________________________________________
-
----
-
-
 ### 🧩 **Conceptual Diagram: Private Endpoint vs Private Link Service**
 
 ```plaintext
@@ -88,6 +78,14 @@ ________________________________________
 * ✅ **Use Private Endpoint** to securely connect to Microsoft-managed services like Storage, SQL, Key Vault, etc.
 * ❌ **Private Link Service** is only for exposing your **own services** privately to other customers or VNets.
 
+
+---
+### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
+________________________________________  
+"Choosing the right service is not just technical — it’s strategic clarity."  
+— Jamalu  
+— Siraat AI Academy  
+________________________________________
 
 ---
 
