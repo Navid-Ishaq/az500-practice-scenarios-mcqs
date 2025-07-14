@@ -44,3 +44,9 @@ ________________________________________
 — Jamalu  
 — Siraat AI Academy  
 ________________________________________
+
+
+### 🔗 Additional Learning Resources  
+1. **MS Learn URL for the topic:** []  
+2. **YouTube video for the question:** []
+
