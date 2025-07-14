@@ -47,6 +47,6 @@ ________________________________________
 ---
 
 ### 🔗 Additional Learning Resources  
-1. <a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-groups" target="_blank">MS Learn URL for the topic</a>  
-2. <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">YouTube video for the question_
+1. **MS Learn URL for the topic:** [How to manage Microsoft Entra groups](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups){:target="_blank"}  
+2. **YouTube video for the question:** []
 
