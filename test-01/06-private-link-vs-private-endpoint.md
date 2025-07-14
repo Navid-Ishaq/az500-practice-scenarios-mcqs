@@ -40,6 +40,50 @@ Did Taylor choose the correct solution?
 
 ---
 
+## 🛠️ **Tools & Services Referenced in This Scenario**
+
+---
+
+### 1. **Azure Private Link Service**
+
+Private Link Service allows you to **expose your own custom service** privately to other VNets or customers.
+It is used primarily in **publisher scenarios** where your service lives behind a standard load balancer.
+Taylor mistakenly uses this, thinking it’s intended for secure access *to* Microsoft-managed services.
+
+---
+
+### 2. **Private Endpoint**
+
+Private Endpoints enable private connectivity to **Microsoft-managed Azure services** like Storage and SQL.
+They use a private IP from your VNet, ensuring traffic never hits the public internet.
+In this case, Taylor **should have used a Private Endpoint** to meet the security goals.
+
+---
+
+### 3. **Azure Virtual Network (VNet)**
+
+An Azure VNet is a logically isolated network space in Azure for hosting compute and services.
+It provides routing, subnetting, and secure communication among resources.
+Taylor’s VMs are deployed in a VNet that supports internal communication with secure services.
+
+---
+
+### 4. **Azure Virtual Machines (VMs)**
+
+Azure VMs provide scalable, on-demand compute resources in the cloud.
+They can connect securely to other resources when placed inside a VNet.
+Taylor wants the VMs to connect securely to storage — without public exposure.
+
+---
+
+### 5. **Azure Storage Account**
+
+Azure Storage offers scalable and secure cloud storage for unstructured and structured data.
+It includes services like Blob, File, Queue, and Table storage.
+Taylor’s objective is to connect to this service privately and securely.
+
+---
+
 ### 🧩 **Conceptual Diagram: Private Endpoint vs Private Link Service**
 
 ```plaintext
@@ -87,7 +131,7 @@ ________________________________________
 — Siraat AI Academy  
 ________________________________________
 
----
+
 
 ### 🔗 Additional Learning Resources  
 1. **MS Learn URL:** [What is Azure Private Link?](https://learn.microsoft.com/en-us/azure/private-link/private-link-overview)  
