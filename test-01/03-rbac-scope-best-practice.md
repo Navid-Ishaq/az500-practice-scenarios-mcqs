@@ -1,9 +1,9 @@
-### 1. **Question Title**  
+### **Question Title**  
 Avoiding Over-Permissioning with Proper Scope in Azure RBAC
 
 ---
 
-### 2. **New MCQ Scenario Statement**  
+### **MCQ Scenario**  
 Ayesha is a cloud engineer at **SkyBridgeTech**, where each development team works on a different application hosted in Azure. These applications are isolated in separate **resource groups**, all under a shared **subscription**. The organization uses **Microsoft Entra Connect** to sync with on-premises Active Directory (AD DS), and team members often work across multiple apps.
 
 Initially, Ayesha assigned roles at the **resource group level** for fine-grained access. However, to simplify management, she decides to remove those assignments and instead give each user the same role at the **subscription level** — thinking it would be more efficient.
@@ -14,7 +14,7 @@ Does Ayesha’s revised approach meet the goal?
 
 ---
 
-### 3. **Answer Choices**  
+### **Options**  
 (a) Yes, because assigning roles at the subscription level makes it easier to manage large groups of users  
 (b) No, because assigning roles at the subscription level gives unnecessary access to unrelated resource groups  
 (c) Yes, because role inheritance ensures correct access flows down to the resource groups  
@@ -22,11 +22,11 @@ Does Ayesha’s revised approach meet the goal?
 
 ---
 
-### ✅ 4. **Correct Answer:** (B)
+### ✅ **Correct Answer:** (B)
 
 ---
 
-### 💡 5. **Explanation**  
+### 💡 **Explanation**  
 **Why (B) is correct:**  
 By assigning roles at the **subscription level**, Ayesha ends up granting access to **all resource groups** under that subscription. This goes against the **principle of least privilege**, which aims to give users only the permissions they absolutely need. In this case, users may gain access to apps they aren’t responsible for — which introduces both security and governance risks.
 
@@ -37,7 +37,7 @@ By assigning roles at the **subscription level**, Ayesha ends up granting access
 
 ---
 
-### 💬 6. **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
+### 💬 **Reflective Quote from Jamalu (Learner’s Inner Guide)**  
 ________________________________________  
 "Permission without precision creates chaos in the cloud."  
 — Jamalu  
