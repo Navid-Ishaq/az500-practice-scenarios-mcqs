@@ -131,7 +131,6 @@ ________________________________________
 — Siraat AI Academy  
 ________________________________________
 
----
 
 ### 🔗 Additional Learning Resources  
 1. **MS Learn URL:** [How to manage Microsoft Entra groups](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups)  
