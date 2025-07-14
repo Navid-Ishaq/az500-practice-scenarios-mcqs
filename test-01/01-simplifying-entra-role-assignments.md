@@ -47,5 +47,5 @@ ________________________________________
 ---
 
 ### 🔗 Additional Learning Resources  
-1. **Microsoft Entra Groups**:https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups
+1. **Microsoft Entra Groups**: https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups
 2. **YouTube video for the question:** []
