@@ -108,7 +108,7 @@ Without these rules, the storage account remains exposed to the internet.
                                          |  (Public endpoint open by   |
                                          |   default unless configured)|
                                          +-----------------------------+
-
+```
 
 ---
 
