@@ -52,4 +52,4 @@ ________________________________________
 
 ### 🔗 Additional Learning Resources  
 1. **MS Learn URL:** [Connect privately to an Azure storage account using Azure Private Endpoint](https://learn.microsoft.com/en-us/azure/private-link/create-private-endpoint-storage-portal)  
-2. **YouTube video for the question:** []
+2. **YouTube video for the question:** [Video resource to be added shortly]
